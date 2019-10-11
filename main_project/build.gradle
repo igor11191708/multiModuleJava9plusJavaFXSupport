@@ -2,7 +2,7 @@ plugins{
     id 'application'
 }
 
-mainClassName = 'com.igor.main.MainApplication'
+mainClassName = "$moduleName/com.igor.main.MainApplication"
 
 ext.moduleName = 'main_project'
 
