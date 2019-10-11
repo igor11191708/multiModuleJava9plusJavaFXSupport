@@ -1,0 +1,5 @@
+rootProject.name = 'multiModuleJava9+'
+
+include 'main_project'
+include 'utils_project'
+

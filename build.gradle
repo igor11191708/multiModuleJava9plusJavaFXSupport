@@ -1,0 +1,49 @@
+allprojects{
+    group 'com.igor'
+    version '1.0-SNAPSHOT'
+}
+
+buildscript {
+    repositories {
+        maven {
+            url 'https://plugins.gradle.org/m2'
+        }
+    }
+    dependencies {
+        classpath 'org.openjfx:javafx-plugin:0.0.8'
+    }
+}
+
+
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'org.openjfx.javafxplugin'
+
+    javafx{
+        version = '13'
+        modules = [
+                'javafx.controls'
+        ]
+    }
+
+    sourceCompatibility = 1.9
+
+    repositories {
+        mavenCentral()
+    }
+
+    afterEvaluate {
+        compileJava{
+            inputs.property('moduleName', moduleName)
+            doFirst {
+                options.compilerArgs=[
+                        '--module-path', classpath.asPath
+                ]
+                classpath = files()
+            }
+        }
+    }
+}
+
+
+
