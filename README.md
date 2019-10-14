@@ -4,7 +4,6 @@ This approach uses IntelliJ IDEA and Gradle to create template for multi module 
 included dependencies for using the next libraries:
 - log4j (for activating logging to file uncomment line at log4j2.xml)
 - retrofit2
-- rxjava3
 
 Details: https://youtu.be/0Pk_9u5nYsM
 
