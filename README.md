@@ -7,3 +7,5 @@ included dependencies for using the next libraries:
 - rxjava3
 
 Details: https://youtu.be/0Pk_9u5nYsM
+
+How to include Scenic View read here: https://github.com/JonathanGiles/scenic-view
